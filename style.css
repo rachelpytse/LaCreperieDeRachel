@@ -1,0 +1,343 @@
+/*    _   _   _   _  
+  / \ / \ / \ / \ 
+ ( B | o | d | y )
+  \_/ \_/ \_/ \_/  */
+body .intro,
+body .instruction,
+body .game {
+  position: absolute;
+
+  /* top:0 left:0 right:0 bottom:0 */
+  inset: 0;
+
+  display: none;
+}
+
+/*    _   _   _   _     _   _   _   _  
+  / \ / \ / \ / \   / \ / \ / \ / \ 
+ ( B | o | d | y ) ( s | t | e | p )
+  \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/  */
+body.step1 .intro {
+  display: block;
+}
+body.step2 .instruction {
+  display: block;
+}
+body.step3 .game {
+  display: flex;
+}
+
+/*    _   _   _   _   _  
+  / \ / \ / \ / \ / \ 
+ ( I | n | t | r | o )
+  \_/ \_/ \_/ \_/ \_/  */
+.intro {
+  /* background-image: url(/LaCreperieDeLucas/images/welcome.png); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.intro h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  color: white;
+  margin-top: 20px;
+}
+
+#start {
+  height: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*
+██ ███    ██ ███████ ████████ ██████  ██    ██  ██████ ████████ ██  ██████  ███    ██ 
+██ ████   ██ ██         ██    ██   ██ ██    ██ ██         ██    ██ ██    ██ ████   ██ 
+██ ██ ██  ██ ███████    ██    ██████  ██    ██ ██         ██    ██ ██    ██ ██ ██  ██ 
+██ ██  ██ ██      ██    ██    ██   ██ ██    ██ ██         ██    ██ ██    ██ ██  ██ ██ 
+██ ██   ████ ███████    ██    ██   ██  ██████   ██████    ██    ██  ██████  ██   ████ 
+*/
+
+.instruction {
+  /* background-image: url(/LaCreperieDeLucas/images/welcome.png); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.instruction h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  color: white;
+  margin-top: 20px;
+}
+
+.instruction p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: black;
+  margin-top: 20px;
+}
+
+#play {
+  height: 50px;
+  margin-bottom: 50px;
+}
+
+/*
+ ██████   █████  ███    ███ ███████ 
+██       ██   ██ ████  ████ ██      
+██   ███ ███████ ██ ████ ██ █████   
+██    ██ ██   ██ ██  ██  ██ ██      
+ ██████  ██   ██ ██      ██ ███████ 
+*/
+
+.game {
+  background-image: url(/images/gameBackground.png);
+  /* background-color: rgba(255, 255, 255, 1); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* nav bar */
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: 20vh;
+  margin-top: 0;
+}
+
+.navBarItem {
+  display: flex;
+  align-items: center;
+}
+
+#scoreBar h2,
+span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  color: white;
+}
+
+#timeBar h2,
+span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  color: white;
+}
+
+#startGame {
+  height: 200px;
+}
+
+/* client */
+#clients {
+  display: flex;
+  justify-content: center;
+}
+
+.clientContainer {
+  position: relative;
+  padding: 0px 150px;
+  margin-left: 0;
+  margin-right: 80px;
+}
+
+.client {
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#clientLeft,
+#clientRight {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.satisfaction-bar {
+  position: absolute;
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  background-color: green;
+}
+
+.client {
+  position: absolute;
+  top: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.client-left {
+  animation: slideInFromLeft 3s forwards;
+}
+
+.client-right {
+  animation: slideInFromRight 3s forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    top: 400px;
+    left: 100px;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    right: -1000px;
+  }
+  100% {
+    top: 400px;
+    right: 100px;
+  }
+}
+
+@keyframes slideOutToLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -1000px;
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -1000px;
+  }
+}
+
+#clientLeft {
+  margin-left: 0px;
+}
+
+#clientLeftImg,
+#clientRightImg {
+  height: 400px;
+}
+
+#satisfactionBar {
+  border: 1px solid black;
+}
+
+.satisfactionBar {
+  height: 100px;
+  position: absolute;
+  left: 50px;
+}
+
+.speechBubble {
+  height: 250px;
+  bottom: 30px;
+  width: 150px;
+  position: absolute;
+  right: 0px;
+}
+
+.orderTop {
+  height: 40px;
+  position: absolute;
+  bottom: 200px;
+  right: 40px;
+}
+
+.orderBottom {
+  height: 40px;
+  position: absolute;
+  bottom: 120px;
+  right: 40px;
+}
+
+/* table */
+#table {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* bowls */
+#bowls {
+  display: flex;
+  flex-direction: column;
+}
+
+.bowl {
+  width: 150px;
+  height: 150px;
+}
+
+/* plateWithCrepe */
+#plates {
+  display: flex;
+  align-items: center;
+}
+
+.plateContainer {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plate {
+  height: 150px;
+}
+
+.plateContainerBtn {
+  width: 50px;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* crepeMakers */
+#crepeMakers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#crepeMakers div {
+  position: relative;
+}
+
+.cookTimeClock {
+  height: 50px;
+  position: absolute;
+  right: -30px;
+}
+
+.crepeMaker {
+  height: 100px;
+}
+
+.timeBar {
+  height: 50px;
+}
+
+#resultContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  text-align: center;
+}
+
+#result {
+  font-size: 5em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+}

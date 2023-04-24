@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>La creperie de Lucas</title>
+</head>
+<body class="step3">
+    <div class="intro">
+        <h1>La crêperie de Lucas</h1>
+        <img id="start" src="/images/Start-Button-Vector-PNG.png" alt="Start">
+    </div>
+
+    <div class="instruction">
+        <h1>Instruction</h1>
+        <p>Click the crepe maker</p>
+        <p>Click the plate</p>
+        <p>Objective</p>
+        <p>Time limit</p>
+        <img id="play" src="/images/play.jpeg" alt="Let's play">
+    </div>
+
+    <div id="resultContainer">
+        <p id="result"></p>
+    </div>
+
+    <div class="game">
+        <nav>
+            <div id="scoreBar" class="navBarItem">
+                <h2>Score : </h2>
+                <span id="score">0</span>
+            </div>
+    
+            <div id="timeBar" class="navBarItem">
+                <h2>Time : </h2>
+                
+                <span id="gameTimeSecond">0</span>
+            </div>
+
+            <div>
+                <img id="startGame" src="/images/start.png" alt="">
+            </div>
+
+        </nav>
+
+        
+
+
+        <div id="table">
+            <div id="bowls">
+                <img id="bowlChantilly" class="bowl" src="/images/bowlChantilly.png" alt="bowlChantilly">
+                <img id="bowlStrawberries" class="bowl" src="/images/bowlStrawberry.png" alt="bowlStrawberries">
+            </div>
+            
+            <div id="plates">
+                <div id="plateContainer1" class="plateContainer">
+                    
+                    <img id="plate1" class="plate" src="/images/plate.png" alt="plate1">
+                    <button id="plateContainer1Btn" class="plateContainerBtn">Send</button>
+                </div>
+    
+                <div id="plateContainer2" class="plateContainer">
+                    
+                    <img id="plate2" class="plate" src="/images/plate.png" alt="plate2">
+                    <button id="plateContainer2Btn" class="plateContainerBtn">Send</button>
+            </div>
+            
+            
+            </div>
+            
+            <div id="crepeMakers">
+                <div id="crepeMakerContainer1" class="crepeMakerContainer">
+                    <img id="crepeMaker1" class="crepeMaker" src="/images/crepeMachine.png" alt="crepeMaker1">
+                    <canvas id="cookTimeClock1" class="cookTimeClock" width="50" height="50"></canvas>
+
+                </div>
+                
+                <div id="crepeMakerContainer2" class="crepeMakerContainer">
+                    <img id="crepeMaker2" class="crepeMaker" src="/images/crepeMachine.png" alt="crepeMaker2">
+                    <canvas id="cookTimeClock2" class="cookTimeClock" width="50" height="50"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
