@@ -46,14 +46,14 @@ class Client {
 
   getRandomImage(side) {
     const leftImages = [
-      "/images/client1.png",
-      "/images/client2.png",
-      "/images/client3.png",
+      "images/client1.png",
+      "images/client2.png",
+      "images/client3.png",
     ];
     const rightImages = [
-      "/images/client4.png",
-      "/images/client5.png",
-      "/images/client6.png",
+      "images/client4.png",
+      "images/client5.png",
+      "images/client6.png",
     ];
     const images = side === 0 ? leftImages : rightImages;
     return images[Math.floor(Math.random() * images.length)];
@@ -61,7 +61,7 @@ class Client {
 
   showOrderImage() {
     const orderImage = document.createElement("img");
-    orderImage.src = `/images/${this.order}.png`;
+    orderImage.src = `images/${this.order}.png`;
     orderImage.style.height = "100px";
     orderImage.alt = this.order;
     orderImage.className = "order";
@@ -201,49 +201,49 @@ class Crepe {
 
   draw() {
     if (this.location === "mc1" && this.state === 1) {
-      this.image.src = "/images/crepeNotFinished.png";
+      this.image.src = "images/crepeNotFinished.png";
       this.image.style.right = "12vw";
       this.image.style.bottom = "25vh";
       this.image.style.height = "30px";
     } else if (this.location === "mc1" && this.state === 2) {
-      this.image.src = "/images/crepeFinished.png";
+      this.image.src = "images/crepeFinished.png";
       this.image.style.right = "12vw";
       this.image.style.bottom = "25vh";
       this.image.style.width = "100px";
     } else if (this.location === "mc1" && this.state === 3) {
-      this.image.src = "/images/crepeOvercooked.png";
+      this.image.src = "images/crepeOvercooked.png";
       this.image.style.right = "12vw";
       this.image.style.bottom = "25vh";
       this.image.style.height = "20px";
     } else if (this.location === "mc2" && this.state === 1) {
-      this.image.src = "/images/crepeNotFinished.png";
+      this.image.src = "images/crepeNotFinished.png";
       this.image.style.right = "12vw";
       this.image.style.bottom = "12vh";
       this.image.style.height = "30px";
     } else if (this.location === "mc2" && this.state === 2) {
-      this.image.src = "/images/crepeFinished.png";
+      this.image.src = "images/crepeFinished.png";
       this.image.style.right = "12vw";
       this.image.style.bottom = "12vh";
       this.image.style.width = "100px";
     } else if (this.location === "mc2" && this.state === 3) {
-      this.image.src = "/images/crepeOvercooked.png";
+      this.image.src = "images/crepeOvercooked.png";
       this.image.style.right = "12vw";
       this.image.style.bottom = "12vh";
       this.image.style.height = "20px";
     } else if (this.location == "p1" && this.target === "simple") {
-      this.image.src = "/images/simple.png";
+      this.image.src = "images/simple.png";
       this.image.style.left = "35vw";
       this.image.style.bottom = "100px";
       this.image.style.height = "200px";
       this.image.style.width = "200px";
     } else if (this.location == "p1" && this.target === "chantilly") {
-      this.image.src = "/images/chantilly.png";
+      this.image.src = "images/chantilly.png";
       this.image.style.left = "35vw";
       this.image.style.bottom = "100px";
       this.image.style.height = "200px";
       this.image.style.width = "200px";
     } else if (this.location == "p1" && this.target === "strawberry") {
-      this.image.src = "/images/strawberry.png";
+      this.image.src = "images/strawberry.png";
       this.image.style.left = "35vw";
       this.image.style.bottom = "100px";
       this.image.style.height = "200px";
@@ -252,25 +252,25 @@ class Crepe {
       this.location == "p1" &&
       this.target === "chantilly-strawberry"
     ) {
-      this.image.src = "/images/chantilly-strawberry.png";
+      this.image.src = "images/chantilly-strawberry.png";
       this.image.style.left = "35vw";
       this.image.style.bottom = "100px";
       this.image.style.height = "200px";
       this.image.style.width = "200px";
     } else if (this.location == "p2" && this.target === "simple") {
-      this.image.src = "/images/simple.png";
+      this.image.src = "images/simple.png";
       this.image.style.right = "35vw";
       this.image.style.bottom = "100px";
       this.image.style.height = "200px";
       this.image.style.width = "200px";
     } else if (this.location == "p2" && this.target === "chantilly") {
-      this.image.src = "/images/chantilly.png";
+      this.image.src = "images/chantilly.png";
       this.image.style.right = "35vw";
       this.image.style.bottom = "100px";
       this.image.style.height = "200px";
       this.image.style.width = "200px";
     } else if (this.location == "p2" && this.target === "strawberry") {
-      this.image.src = "/images/strawberry.png";
+      this.image.src = "images/strawberry.png";
       this.image.style.right = "35vw";
       this.image.style.bottom = "100px";
       this.image.style.height = "200px";
@@ -279,7 +279,7 @@ class Crepe {
       this.location == "p2" &&
       this.target === "chantilly-strawberry"
     ) {
-      this.image.src = "/images/chantilly-strawberry.png";
+      this.image.src = "images/chantilly-strawberry.png";
       this.image.style.right = "35vw";
       this.image.style.bottom = "100px";
       this.image.style.height = "200px";

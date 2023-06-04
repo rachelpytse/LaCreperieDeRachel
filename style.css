@@ -94,7 +94,7 @@ body.step3 .game {
 */
 
 .game {
-  background-image: url(/images/gameBackground.png);
+  background-image: url(images/gameBackground.png);
   /* background-color: rgba(255, 255, 255, 1); */
   background-size: cover;
   background-repeat: no-repeat;
