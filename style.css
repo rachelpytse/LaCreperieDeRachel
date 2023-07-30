@@ -473,10 +473,12 @@ span {
   width: 100vw;
   display: flex;
   text-align: center;
+  z-index: 100;
 }
 
 #result {
   font-size: 5em;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
+  z-index: 100;
 }

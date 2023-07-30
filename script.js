@@ -470,8 +470,8 @@ function startGame() {
   const targetScore = 10;
   const timeLimit = document.querySelector("#gameTimeSecond");
   const result = document.querySelector("#result");
-  let timeCount = 40;
-  let scoreCount = 0;
+  let timeCount = 90;
+  let score = 0;
 
   timeLimit.innerHTML = `${timeCount}`;
   let timer = setInterval(() => {
@@ -479,7 +479,7 @@ function startGame() {
     timeLimit.innerHTML = `${timeCount}`;
     if (timeCount <= 0) {
       clearInterval(timer);
-      if (scoreCount >= targetScore) {
+      if (score >= targetScore) {
         result.innerHTML = "You win!";
       } else {
         result.innerHTML = "You lose!";
