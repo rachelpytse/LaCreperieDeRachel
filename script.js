@@ -470,7 +470,7 @@ function startGame() {
   const targetScore = 10;
   const timeLimit = document.querySelector("#gameTimeSecond");
   const result = document.querySelector("#result");
-  let timeCount = 20;
+  let timeCount = 40;
   let scoreCount = 0;
 
   timeLimit.innerHTML = `${timeCount}`;
@@ -494,3 +494,26 @@ startGameButton.addEventListener("click", () => {
   setTimeout(() => spawnClient(1), 6000);
   animloop();
 });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.getElementById('start').addEventListener('click', () => {
+      document.body.className = "step2";
+      switchScene('instruction');
+  });
+
+  document.getElementById('play').addEventListener('click', () => {
+      document.body.className = "step3";
+      switchScene('game');
+      
+  });
+
+  
+});
+
+function switchScene(sceneId) {
+  document.querySelectorAll('.scene').forEach((scene) => {
+      scene.classList.add('hidden');
+  });
+
+  document.getElementById(sceneId).classList.remove('hidden');
+}

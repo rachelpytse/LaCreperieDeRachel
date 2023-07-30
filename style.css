@@ -13,18 +13,44 @@ body .game {
   display: none;
 }
 
+.mainBtn {
+  display: inline-flex;
+  width: fit-content;
+  height: 48px;
+  padding: 0px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: #FD9757;
+  color: #FFF;
+  font-family: Quicksand;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.mainBtn:hover {
+  background: #FDC57B;
+}
+
 /*    _   _   _   _     _   _   _   _  
   / \ / \ / \ / \   / \ / \ / \ / \ 
  ( B | o | d | y ) ( s | t | e | p )
   \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/  */
 body.step1 .intro {
-  display: block;
+  display: flex;
 }
 body.step2 .instruction {
-  display: block;
+  display: flex;
 }
 body.step3 .game {
   display: flex;
+}
+.hidden {
+  display: none;
 }
 
 /*    _   _   _   _   _  
@@ -32,23 +58,65 @@ body.step3 .game {
  ( I | n | t | r | o )
   \_/ \_/ \_/ \_/ \_/  */
 .intro {
-  /* background-image: url(/LaCreperieDeLucas/images/welcome.png); */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
 }
 
-.intro h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  color: white;
-  margin-top: 20px;
+.introContent {
+  display: flex;
+  flex-direction: column;
+  margin: auto 2rem auto auto;
+  z-index: 100;
+}
+
+.intro img {
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+  aspect-ratio: 1;
+}
+
+.introHeading1 {
+  font-family: Modak;
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  background: linear-gradient(316deg, #079E91 0%, #7FA99B 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.introHeading2 {
+  text-align: center;
+  font-family: Modak;
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  background: linear-gradient(316deg, #FF731C 0%, #FDC57B 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.gourmande {
+  background-image: url(images/gourmande.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
 }
 
 #start {
-  height: 50px;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: 2rem auto 0 auto;
 }
 
 /*
@@ -60,24 +128,44 @@ body.step3 .game {
 */
 
 .instruction {
-  /* background-image: url(/LaCreperieDeLucas/images/welcome.png); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
   text-align: center;
+  padding-top: 3rem;
 }
 
-.instruction h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  color: white;
-  margin-top: 20px;
+.instructionHeading {
+  color: #394A51;
+  font-family: Quicksand;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-.instruction p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  color: black;
-  margin-top: 20px;
+ol {
+  max-width: 37rem;
+  text-align: left;
+  font-family: Quicksand;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 1rem 0 2rem;
+  padding: 2rem 4rem;
+  background: #FCFEEC;
+  border-radius: 40px;
+}
+
+li {
+  
+  margin-bottom: 1rem;
 }
 
 #play {
@@ -94,7 +182,7 @@ body.step3 .game {
 */
 
 .game {
-  background-image: url(images/gameBackground.png);
+  background-image: url(images/bg.svg);
   /* background-color: rgba(255, 255, 255, 1); */
   background-size: cover;
   background-repeat: no-repeat;
@@ -302,7 +390,14 @@ span {
   padding: 10px;
   margin: 20px;
   text-align: center;
+  background-color: brown;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+
 }
+
+
 
 /* crepeMakers */
 #crepeMakers {

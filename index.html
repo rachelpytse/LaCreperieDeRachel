@@ -5,28 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>La creperie de Lucas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>La crêperie gourmande</title>
 </head>
-<body class="step3">
-    <div class="intro">
-        <h1>La crêperie de Lucas</h1>
-        <img id="start" src="images/Start-Button-Vector-PNG.png" alt="Start">
+<body class="step1">
+    <div class="intro scene">
+        <img src="images/crepeBg.png" alt="">
+        <div class="introContent">
+            <h1 class="introHeading1">La crêperie</h1>
+            <div class="gourmande"><h1 class="introHeading2">GOURMANDE</h1></div>
+            <button id="start" class="mainBtn">Let's play</button>
+        </div>
     </div>
 
-    <div class="instruction">
-        <h1>Instruction</h1>
-        <p>Click the crepe maker</p>
-        <p>Click the plate</p>
-        <p>Objective</p>
-        <p>Time limit</p>
-        <img id="play" src="images/play.jpeg" alt="Let's play">
+    <div class="instruction scene hidden">
+        <h1 class="instructionHeading">How to play</h1>
+        <ol>
+            <li>Click the start button to start the game</li>
+            <li>Customers come randomly and order different types of crêpe
+                <ul>
+                    <li>Click on the crêpe machine to start cooking a crêpe</li>
+                    <li>When the crêpe is ready, click the machine again to move the crêpe to the plate</li>
+                    <li>Click on the toppings according to the customer`s order (If the order is a crêpe with strawberry and cream, add the cream first and after that strawberry 😉)</li>
+                    <li>Click on `Send button to send the order to customer</li>
+                </ul>
+            </li>
+            <li>Gain more than 10 points within the time limit to win the game</li>
+        </ol>
+        <button id="play" class="mainBtn">OK let's start now</button>
     </div>
 
     <div id="resultContainer">
         <p id="result"></p>
     </div>
 
-    <div class="game">
+    <div class="game scene hidden">
         <nav>
             <div id="scoreBar" class="navBarItem">
                 <h2>Score : </h2>
